@@ -86,6 +86,7 @@ a {
   font-size: 26px;
   line-height: 36px;
   font-weight: 700;
+  min-height: 92px;
 
   text-transform: uppercase;
   color: #ffffff;
@@ -1144,7 +1145,7 @@ li.theme-item:nth-child(2n+3) {
 
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px) {
   .trend-card {
-    width: calc(24% - 2px);
+    width: calc(25% - 2px);
     min-height: 247px;
     margin-right: 2px;
   }
