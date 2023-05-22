@@ -337,7 +337,7 @@ li {
 }
 
 .info-block {
-  width: 100%;
+  
   margin-left: 16px;
 }
 
@@ -823,10 +823,11 @@ li.theme-item:nth-child(2n+3) {
 }
 
 @media (orientation: portrait) and (max-width: 640px) {
+  
   .trends-block {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    
   }
 
   .trend-card {
@@ -835,7 +836,6 @@ li.theme-item:nth-child(2n+3) {
     margin-right: 2px;
   }
 
-
 }
 
 @media (orientation: landscape) and (max-width: 640px) {
@@ -843,11 +843,10 @@ li.theme-item:nth-child(2n+3) {
   .trends-block {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   .trend-card {
-    width: calc(48% - 2px);
+    width: calc(50% - 2px);
     min-height: 247px;
     margin-right: 2px;
   }
@@ -896,21 +895,13 @@ li.theme-item:nth-child(2n+3) {
 @media (orientation: portrait) and (min-width: 641px) and (max-width: 1200px) {
 
   .trend-card {
-    width: calc(48% - 2px);
+    width: calc(50% - 2px);
     min-height: 247px;
     margin-right: 2px;
   }
 
 } /* 2 колонки портрет*/
 
-@media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px) {
-  .trend-card {
-    width: calc(24% - 2px);
-    min-height: 247px;
-    margin-right: 2px;
-  }
-
-} /* 4 колонки пейзаж*/
 
 @media (min-width: 768px) {
   .mf-content {
@@ -971,13 +962,19 @@ li.theme-item:nth-child(2n+3) {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 6px;
-  }
+  } 
 
   .trend-card {
     width: calc(50% - 2px);
     min-height: 247px;
-    margin-right: 2px;
+    /*margin-right: 2px; */
   }
+  .trend-card:nth-child(even) {
+    margin-left: 1px;
+}
+.trend-card:nth-child(odd) {
+  margin-right: 1px;
+}
 
 
   .trend-title {
@@ -1145,9 +1142,17 @@ li.theme-item:nth-child(2n+3) {
   }
 }
 
+@media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px) {
+  .trend-card {
+    width: calc(24% - 2px);
+    min-height: 247px;
+    margin-right: 2px;
+  }
+
+} /* 4 колонки пейзаж*/
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .header-text-block {
     max-width: 674px;
     margin: auto;
@@ -1217,6 +1222,7 @@ li.theme-item:nth-child(2n+3) {
     width: calc(25% - 3px);
     min-height: 320px;
     padding: 25px;
+    margin-right: 3px;
   }
 
   .trend-title {
