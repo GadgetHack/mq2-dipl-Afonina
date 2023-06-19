@@ -49,6 +49,13 @@ li {
   max-height: 650px;
 }
 
+.art-header-max-content {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 
 .art-header::after {
   content: "";
@@ -75,7 +82,20 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 
+}
+
+@media (min-width: 768px) {
+  .max-content{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+  }
+  
 }
 
 @media (min-width: 768px) {
@@ -263,7 +283,8 @@ _.mf-content {
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+
+@media (min-width: 641px) {
   .title {
     max-width: 662px;
     font-size: 40px;
@@ -283,7 +304,6 @@ _.mf-content {
 @media (min-width: 1660px) {
   .title {
     font-size: 43px;
-    margin-top: 67px;
     line-height: 1.7em;
   }
 }
@@ -457,6 +477,7 @@ _.mf-content {
     flex-wrap: wrap;
     justify-content: center;
   }
+
 }
 
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1199px) {
@@ -672,55 +693,37 @@ _.mf-content {
 }
 
 @media (orientation: portrait) and (min-width: 641px) and (max-width: 1200px) {
-  .content-boxes {
+  /* .content-boxes {
     display: flex;
     margin: auto;
 
 
-  }
-}
-
-@media (min-width: 768px) {
-  .content-boxes {
-    display: flex;
-    justify-content: center;
-
-  }
-}
-
-@media (min-width: 1200px) {
-  .content-boxes {
-    justify-content: space-between;
-
-  }
+  } */
 }
 
 
-.content-foto {
-  width: 100%;
-}
+
 
 /* 2 колонки пейзаж*/
-@media (orientation: portrait) and (min-width: 641px) and (max-width: 1200px) {
+@media (orientation: portrait) and (min-width: 641px) {
   .resp-mq {
     margin-right: 15px;
   }
 
   .resp-mq {
-    max-width: 396px;
+    width: 100%
   }
 }
 
 @media (min-width: 768px) {
   .resp-mq {
-    margin-right: 32px;
+    width: auto;
   }
 
 }
 
 @media (min-width: 1031px) {
   .resp-mq {
-    max-width: 396px;
 
   }
 
@@ -1122,25 +1125,36 @@ li.theme-item:nth-child(2n+3) {
   margin: auto;
   height: 100%;
   margin-bottom: 23px;
-
+  width: 100%;
 }
 
-
 @media (min-width: 768px) {
+
   .product-card {
     flex: 1;
     display: flex;
     flex-direction: column;
     margin: 0;
     margin-bottom: 30px;
-
+    width: fit-content;
   }
 
-  .product-card:nth-child(n+2) {
-    margin-left: 23px;
+  .product-card:nth-child(even) {
+    margin-left: auto;
   }
 }
 
+
+
+@media (min-width: 1030px) {
+  .product-card:nth-child(even) {
+    margin-right: auto;
+  }
+
+  .product-card:last-child {
+    margin-left: auto;
+  }
+}
 
 @media (min-width: 1200px) {
   .product-card {
@@ -1155,15 +1169,19 @@ li.theme-item:nth-child(2n+3) {
 }
 
 .ishop-card {
-  max-width: 280px;
-  max-height: 282px;
+  width: calc(100% - 40px);
   display: block;
   margin: auto;
   position: relative;
   z-index: 10;
 }
 
-
+@media (min-width: 768) {
+  .ishop-card {
+    max-width: 280px;
+    max-height: 282px;
+  }
+}
 
 .product-content {
   margin-top: -32px;
@@ -1173,9 +1191,19 @@ li.theme-item:nth-child(2n+3) {
   padding: 50px 20px 30px 20px;
   border: 3px solid #b59f5b;
   flex: 1;
-  width: 320px;
   min-height: 216px;
   align-self: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .product-content {
+    width: 320px;
+  }
+}
+
+.content__shop-box {
+  width: 100%;
 }
 
 @media (min-width: 685px) {
@@ -1183,7 +1211,6 @@ li.theme-item:nth-child(2n+3) {
     display: grid;
     gap: 23px;
     grid-template-columns: auto auto;
-
   }
 
 }
@@ -1485,17 +1512,12 @@ li.theme-item:nth-child(2n+3) {
   background-color: #f4f7f6;
   margin: auto;
   margin-top: 40px;
-  padding: 30px 0;
   width: 100%;
 }
 
 .more-media-info {
   display: flex;
   justify-content: center;
-}
-
-.media-icon:nth-child(n + 2) {
-  margin-left: 30px;
 }
 
 .container-center {
@@ -1612,21 +1634,21 @@ li.theme-item:nth-child(2n+3) {
 
 }
 
+.content-foto {
+  width: 100%;
+}
+
 @media (min-width: 480px) {
   .new-post-box {
-    width: 66%;
     margin: auto;
   } 
-  
 }
 
 @media (min-width: 641px) {
   .new-post-box {
-    width: 66%;
     margin: 0;
+    width: auto;
   }
-
-
 }
 
 @media (min-width: 1200px) {
@@ -1795,4 +1817,8 @@ li.theme-item:nth-child(2n+3) {
     margin-top: 56px;
     margin-left: -26px;
   }
+}
+
+.media-icon {
+  margin: 30px 15px;
 }
